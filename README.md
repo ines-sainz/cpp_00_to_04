@@ -89,5 +89,12 @@ It overrides the name attribute, adds a `whoAmI()` method to display both names,
 **Exercise 00** (Polymorphism): Runtime polymorphism in C++ by using base class pointers to call overridden functions (`makeSound()`) in derived classes `Dog`, `Cat`.
 It also demonstrates the consequences of missing virtual functions through the `WrongAnimal`/`WrongCat` pair.
 
+**Exercise 01** (I don’t want to set the world on fire): Deep copy and proper memory management in polymorphic class hierarchies.
+It adds a `Brain` class to `Dog` and `Cat`, ensures dynamic allocation/deallocation, and requires correct destructor behavior and deep copy semantics.
 
+**Exercise 02** (Abstract class): Makes `Animal` an abstract class by adding at least one pure virtual function.
+It ensures no `Animal` objects can be created directly, enforcing polymorphic behavior via derived classes like `Dog` and `Cat`.
+
+**Exercise 03** ( Interface & recap): Full interface-based polymorphic system using pure abstract classes to mimic interfaces in C++98.
+Building a `MateriaSource` that creates `AMateria` instances (`Ice`, `Cure`) and a `Character` class that can equip, unequip, and use them dynamically. It emphasizes proper memory management, deep copies, and abstract class design.
 
