@@ -12,6 +12,15 @@
 
 #include <iostream>
 
+/**
+ * @brief Demonstrates the use of a string, pointer, and reference.
+ *
+ * Creates a string variable, a pointer to that string, and a reference to
+ * the same string. Prints their memory addresses and the values they point
+ * to or refer to.
+ *
+ * @return int Exit status of the program.
+ */
 int	main(void)
 {
 	std::string	stringVAR = "HI THIS IS BRAIN";
