@@ -12,17 +12,29 @@
 
 #include "Zombie.hpp"
 
+/**
+ * @brief Announces the zombie's presence with a brain-loving message.
+ */
 void Zombie:: announce( void )
 {
 	std::cout << name <<": BraiiiiiiinnnzzzZ..." <<std::endl;
 }
 
+/**
+ * @brief Constructs a Zombie with the given name.
+ * @param name The name of the zombie.
+ */
 Zombie::Zombie( std::string name )
 {
 	this->name = name;
 	std::cout << "Zombie Constructor" <<std::endl;
 }
 
+/**
+ * @brief Destructor for the Zombie.
+ *
+ * Logs the destruction of the zombie with its name.
+ */
 Zombie::~Zombie( void )
 {
 	std::cout << name << " Zombie Destructor" <<std::endl;
