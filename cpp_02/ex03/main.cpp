@@ -14,6 +14,14 @@
 #include "Point.hpp"
 #include <iostream>
 
+/**
+ * @brief Entry point for testing the bsp (point-in-triangle) function.
+ * 
+ * Initializes a triangle defined by three points (a, b, c) and tests whether
+ * various points lie inside, outside, or on the border of the triangle.
+ * 
+ * @return int Returns 0 upon successful execution.
+ */
 int main( void )
 {
 	Point	a(0, 0);
