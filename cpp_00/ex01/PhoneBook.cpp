@@ -12,6 +12,16 @@
 
 #include "PhoneBook.hpp"
 
+/**
+ * @brief Handles user input commands: ADD, SEARCH, and EXIT.
+ *
+ * If input is "ADD", adds a new contact.  
+ * If input is "SEARCH", displays contacts and lets the user select one.  
+ * If input is "EXIT", signals program exit.
+ *
+ * @param input User command string.
+ * @return int 1 to exit or on EOF/error, 0 to continue.
+ */
 int	PhoneBook:: check_input(std::string input)
 {
 	size_t	i;
@@ -54,12 +64,22 @@ int	PhoneBook:: check_input(std::string input)
 	return (0);
 }
 
+/**
+ * @brief PhoneBook constructor.
+ *
+ * Initializes number of contacts to 0 and prints a message.
+ */
 PhoneBook::PhoneBook(void)
 {
 	this->n_contact = 0;
 	std::cout << "PhoneBook Constructor" <<std::endl;
 }
 
+/**
+ * @brief PhoneBook destructor.
+ *
+ * Prints a message when the PhoneBook object is destroyed.
+ */
 PhoneBook::~PhoneBook(void)
 {
 	std::cout << "PhoneBook Destructor" <<std::endl;
