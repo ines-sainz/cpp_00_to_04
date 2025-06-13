@@ -13,6 +13,14 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
+/**
+ * @brief Entry point of the program.
+ * 
+ * Demonstrates the functionality of ClapTrap and ScavTrap objects.
+ * It tests attacking, repairing, and the ScavTrap's gate keeper mode.
+ * 
+ * @return int Exit status code.
+ */
 int main()
 {
 	ClapTrap	person1("Person1");
