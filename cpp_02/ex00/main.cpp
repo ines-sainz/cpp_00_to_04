@@ -12,6 +12,14 @@
 
 #include "Fixed.hpp"
 
+/**
+ * @brief Entry point for testing the Fixed class functionality.
+ * 
+ * Creates several Fixed objects, performs a copy and assignment,
+ * and prints their internal raw fixed-point values.
+ * 
+ * @return int Returns 0 upon successful execution.
+ */
 int main( void )
 {
 	Fixed a;
