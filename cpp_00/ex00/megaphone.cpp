@@ -14,6 +14,17 @@
 #include <string.h>
 #include <ctype.h>
 
+/**
+ * @brief Entry point of the program.
+ *
+ * Iterates through command-line arguments (if any), converts them to
+ * uppercase, and prints the result. If no arguments are provided, a default
+ * message is displayed.
+ *
+ * @param argc Number of command-line arguments.
+ * @param argv Array of command-line argument strings.
+ * @return int Exit status of the program. Returns 0 on successful execution.
+ */
 int	main(int argc, char **argv)
 {
 	int	i;
