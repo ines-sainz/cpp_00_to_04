@@ -14,6 +14,15 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
+/**
+ * @brief Entry point of the program.
+ * 
+ * Demonstrates the functionality of ClapTrap, ScavTrap, and FragTrap
+ * objects by calling various methods like attack, beRepaired, and
+ * class-specific features such as guardGate and highFivesGuys.
+ * 
+ * @return int Returns 0 on successful execution.
+ */
 int main()
 {
 	ClapTrap	person1("Person1");
