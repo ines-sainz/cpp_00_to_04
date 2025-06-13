@@ -13,6 +13,16 @@
 
 #include "PhoneBook.hpp"
 
+/**
+ * @brief Entry point of the PhoneBook program.
+ *
+ * Continuously prompts the user for input until EOF or EXIT command.
+ * Handles user commands using the PhoneBook::check_input function.
+ *
+ * @param argc Argument count (unused).
+ * @param argv Argument vector (unused).
+ * @return int Returns 0 on normal exit, 1 on error or EXIT command.
+ */
 int	main(int argc, char **argv)
 {
 	PhoneBook	phone_book;
