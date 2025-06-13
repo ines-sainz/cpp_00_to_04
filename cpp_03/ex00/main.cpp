@@ -12,6 +12,15 @@
 
 #include "ClapTrap.hpp"
 
+/**
+ * @brief Main function demonstrating the behavior of the ClapTrap class.
+ *
+ * This function creates two ClapTrap objects and simulates various actions
+ * such as attacking, taking damage, and repairing. The output shows how each
+ * ClapTrap reacts to these actions based on their internal state.
+ *
+ * @return int Returns 0 on successful execution.
+ */
 int main()
 {
 	ClapTrap	person1("Person1");
