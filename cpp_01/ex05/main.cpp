@@ -12,6 +12,14 @@
 
 #include "Harl.hpp"
 
+/**
+ * @brief Main function demonstrating the Harl class complain method.
+ *
+ * Creates a Harl object and calls complain with different levels:
+ * "DEBUG", "INFO", "WARNING", "ERROR", and an empty string.
+ *
+ * @return Returns 0 on program completion.
+ */
 int main( void )
 {
 	Harl harl;
