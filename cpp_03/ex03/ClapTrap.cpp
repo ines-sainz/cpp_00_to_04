@@ -12,6 +12,13 @@
 
 #include "ClapTrap.hpp"
 
+/**
+ * @brief Repairs the ClapTrap by a given amount of hit points.
+ * 
+ * If the ClapTrap is dead or out of energy, it cannot be repaired.
+ *
+ * @param amount The number of hit points to restore.
+ */
 void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (this->hitPoints <= 0)
