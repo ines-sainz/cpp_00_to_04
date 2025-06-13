@@ -12,6 +12,14 @@
 
 #include "Zombie.hpp"
 
+/**
+ * @brief Entry point of the program.
+ *
+ * Creates a zombie using newZombie(), makes it announce itself, then deletes it.
+ * Also creates another zombie with randomChump() which announces itself immediately.
+ *
+ * @return int Exit status of the program.
+ */
 int	main(void)
 {
 	Zombie	*zombie_1;
