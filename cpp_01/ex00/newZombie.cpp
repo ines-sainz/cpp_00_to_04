@@ -12,6 +12,14 @@
 
 #include "Zombie.hpp"
 
+/**
+ * @brief Creates a new Zombie on the heap.
+ *
+ * Allocates a new Zombie object with the given name and returns its pointer.
+ *
+ * @param name The name of the zombie.
+ * @return Zombie* Pointer to the newly created Zombie.
+ */
 Zombie*	newZombie( std::string name )
 {
 	Zombie *new_zombie = new Zombie(name);
