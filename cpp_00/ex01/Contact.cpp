@@ -12,6 +12,9 @@
 
 #include "PhoneBook.hpp"
 
+/**
+ * @brief Prints all fields of the contact in a detailed format.
+ */
 void Contact:: print_all_contact(void)
 {
 	std::cout << "First_name: " << this->first_name <<std::endl;
@@ -21,6 +24,14 @@ void Contact:: print_all_contact(void)
 	std::cout << "Dark_secret: " << this->dark_secret <<std::endl;
 }
 
+/**
+ * @brief Prints a string in a fixed-width column (10 chars).
+ *
+ * If the string exceeds 10 characters, it truncates to 9 and adds a dot.
+ *
+ * @param str The string to print.
+ * @param len_str The actual length of the string.
+ */
 void Contact:: print_col(std::string str,  int len_str)
 {
 	int spaces;
@@ -41,6 +52,12 @@ void Contact:: print_col(std::string str,  int len_str)
 		std::cout << ".";
 }
 
+/**
+ * @brief Prints a contact's index, first name, last name, and nickname
+ *        in column format.
+ *
+ * @param i Index of the contact to print.
+ */
 void Contact:: print_contact(int i)
 {
 	std::stringstream index;
@@ -56,6 +73,14 @@ void Contact:: print_contact(int i)
 	std::cout << "\n";
 }
 
+/**
+ * @brief Validates and stores a phone number string.
+ *
+ * Checks that the number is 9 digits and only numeric characters.
+ *
+ * @param number C-string representing the phone number.
+ * @return int 0 if valid, 1 if invalid.
+ */
 int	Contact:: check_phone(const char *number)
 {
 	int i;
@@ -79,6 +104,14 @@ int	Contact:: check_phone(const char *number)
 	return (0);
 }
 
+/**
+ * @brief Prompts user to input contact fields and stores them.
+ *
+ * Validates that inputs are not empty and phone number is valid.
+ *
+ * @param n_contact Pointer to number of contacts (used for rollback).
+ * @return int 0 if successfully added, 1 on EOF or error.
+ */
 int	Contact:: add_contact(int *n_contact)
 {
 	std::string	input[5];
@@ -120,6 +153,15 @@ int	Contact:: add_contact(int *n_contact)
 	return (0);
 }
 
+/**
+ * @brief Sets all fields of the contact manually.
+ *
+ * @param first_name First name of the contact.
+ * @param last_name Last name of the contact.
+ * @param nickname Nickname of the contact.
+ * @param phone_number Phone number of the contact.
+ * @param dark_secret Darkest secret of the contact.
+ */
 void	Contact:: set_info(std::string first_name, std::string last_name, std::string nickname, long phone_number, std::string dark_secret)
 {
 	this->first_name = first_name;
@@ -129,11 +171,21 @@ void	Contact:: set_info(std::string first_name, std::string last_name, std::stri
 	this->dark_secret = dark_secret;
 }
 
+/**
+ * @brief Contact class constructor.
+ *
+ * Prints a message when a Contact object is created.
+ */
 Contact::Contact(void)
 {
 	std::cout << "Contact Constructor" <<std::endl;
 }
 
+/**
+ * @brief Contact class destructor.
+ *
+ * Prints a message when a Contact object is destroyed.
+ */
 Contact::~Contact(void)
 {
 	std::cout << "Contact Destructor" <<std::endl;
