@@ -12,6 +12,13 @@
 
 #include "ClapTrap.hpp"
 
+/**
+ * @brief Repairs the ClapTrap, restoring hit points.
+ * 
+ * Increases hit points by the given amount if ClapTrap is alive and has energy.
+ * 
+ * @param amount The amount of hit points to restore.
+ */
 void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (this->hitPoints <= 0)
@@ -31,6 +38,14 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	this->EnergyPoints -= 1;
 }
 
+/**
+ * @brief Causes the ClapTrap to take damage.
+ * 
+ * Reduces hit points by the given amount. If hit points reach zero or less,
+ * ClapTrap is considered dead.
+ * 
+ * @param amount The amount of damage to apply.
+ */
 void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (this->hitPoints <= 0)
@@ -49,6 +64,13 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	std::cout << ". " << this->hitPoints << " hit points left!\n";
 }
 
+/**
+ * @brief Performs an attack on the specified target.
+ * 
+ * Decreases energy points by 1 if there is enough energy and ClapTrap is alive.
+ * 
+ * @param target The name of the target being attacked.
+ */
 void	ClapTrap::attack(const std::string& target)
 {
 	if (this->hitPoints <= 0)
@@ -67,6 +89,14 @@ void	ClapTrap::attack(const std::string& target)
 		std::cout << "ClapTrap " << this->name << " can't attack, not enough EnergyPoints" << std::endl;
 }
 
+/**
+ * @brief Copy assignment operator for ClapTrap.
+ * 
+ * Copies all attributes from the given ClapTrap instance.
+ * 
+ * @param before The ClapTrap instance to copy from.
+ * @return ClapTrap& Reference to the current object.
+ */
 ClapTrap& ClapTrap:: operator=(const ClapTrap& before)
 {
 	std::cout << "Copy assigment operator called" << std::endl;
@@ -77,12 +107,26 @@ ClapTrap& ClapTrap:: operator=(const ClapTrap& before)
 	return (*this);
 }
 
+/**
+ * @brief Copy constructor for ClapTrap.
+ * 
+ * Creates a new ClapTrap instance by copying another.
+ * 
+ * @param before The ClapTrap instance to copy.
+ */
 ClapTrap::ClapTrap(const ClapTrap& before)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = before;
 }
 
+/**
+ * @brief Constructor with name for ClapTrap.
+ * 
+ * Initializes ClapTrap with the given name and default attributes.
+ * 
+ * @param name Name of the ClapTrap.
+ */
 ClapTrap::ClapTrap(std::string name)
 {
 	this->name = name;
@@ -92,6 +136,11 @@ ClapTrap::ClapTrap(std::string name)
 	std::cout << "ClapTrap " << this->name << " Constructor" << std::endl;
 }
 
+/**
+ * @brief Default constructor for ClapTrap.
+ * 
+ * Initializes ClapTrap with default values.
+ */
 ClapTrap::ClapTrap(void)
 {
 	name = "";
@@ -101,6 +150,11 @@ ClapTrap::ClapTrap(void)
 	std::cout << "Default ClapTrap Constructor" << std::endl;
 }
 
+/**
+ * @brief Destructor for ClapTrap.
+ * 
+ * Cleans up the ClapTrap instance.
+ */
 ClapTrap::~ClapTrap()
 {
 	std::cout << "Default ClapTrap Destructor" << std::endl;
