@@ -12,6 +12,15 @@
 
 #include "Zombie.hpp"
 
+/**
+ * @brief Entry point of the program.
+ *
+ * Creates a horde of 5 Zombies named "a_zombie", makes each Zombie
+ * announce itself, and then properly deallocates the dynamically
+ * allocated memory for the Zombie horde.
+ *
+ * @return int Exit status of the program.
+ */
 int	main(void)
 {
 	Zombie	*zombies;
