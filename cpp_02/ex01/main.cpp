@@ -12,6 +12,14 @@
 
 #include  "Fixed.hpp"
 
+/**
+ * @brief Entry point of the program demonstrating Fixed class usage.
+ * 
+ * Creates several Fixed objects using different constructors, assigns a float 
+ * value, and prints both their float and integer representations.
+ * 
+ * @return int Returns 0 on successful execution.
+ */
 int main( void )
 {
 	Fixed a;
