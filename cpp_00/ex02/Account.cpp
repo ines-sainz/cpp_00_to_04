@@ -20,30 +20,49 @@ int	Account::_totalAmount = 0;
 int	Account::_totalNbDeposits = 0;
 int	Account::_totalNbWithdrawals = 0;
 
+/**
+ * @brief Returns the total number of accounts.
+ * @return Number of accounts.
+ */
 int Account:: getNbAccounts( void )
 {
 	std::cout << "getNbAccounts" <<std::endl;
 	return (_nbAccounts);
 }
 
+/**
+ * @brief Returns the total amount across all accounts.
+ * @return Total amount.
+ */
 int Account:: getTotalAmount( void )
 {
 	std::cout << "getTotalAmount" <<std::endl;
 	return (_totalAmount);
 }
 
+/**
+ * @brief Returns the total number of deposits made.
+ * @return Number of deposits.
+ */
 int Account:: getNbDeposits( void )
 {
 	std::cout << "getNbDeposits" <<std::endl;
 	return (_totalNbDeposits);
 }
 
+/**
+ * @brief Returns the total number of withdrawals made.
+ * @return Number of withdrawals.
+ */
 int Account:: getNbWithdrawals( void )
 {
 	std::cout << "getNbWithdrawals" <<std::endl;
 	return (_totalNbWithdrawals);
 }
 
+/**
+ * @brief Displays overall information for all accounts.
+ */
 void Account:: displayAccountsInfos( void )
 {
 	_displayTimestamp();
@@ -53,6 +72,10 @@ void Account:: displayAccountsInfos( void )
 	std::cout << "withdrawals:" << _totalNbWithdrawals <<std::endl;
 }
 
+/**
+ * @brief Makes a deposit into the account and updates totals.
+ * @param deposit Amount to deposit.
+ */
 void Account:: makeDeposit( int deposit )
 {
 	_displayTimestamp();
@@ -67,6 +90,11 @@ void Account:: makeDeposit( int deposit )
 	std::cout << "nb_deposits:" << _nbDeposits <<std::endl;
 }
 
+/**
+ * @brief Attempts to withdraw from the account.
+ * @param withdrawal Amount to withdraw.
+ * @return true if withdrawal is refused, false otherwise.
+ */
 bool Account:: makeWithdrawal( int withdrawal )
 {
 	_displayTimestamp();
@@ -88,12 +116,19 @@ bool Account:: makeWithdrawal( int withdrawal )
 	return (0);
 }
 
+/**
+ * @brief Returns the total amount across all accounts (read-only).
+ * @return Total amount.
+ */
 int Account:: checkAmount( void ) const
 {
 	std::cout << "checkAmount" <<std::endl;
 	return (_totalAmount);
 }
 
+/**
+ * @brief Displays the status of the current account.
+ */
 void Account:: displayStatus( void ) const
 {
 	_displayTimestamp();
@@ -103,6 +138,9 @@ void Account:: displayStatus( void ) const
 	std::cout << "withdrawals:" << _nbWithdrawals <<std::endl;
 }
 
+/**
+ * @brief Displays the current timestamp in [YYYYMMDD_HHMMSS] format.
+ */
 void Account:: _displayTimestamp( void )
 {
 	std::time_t	act_time = std::time(NULL);
@@ -119,6 +157,10 @@ void Account:: _displayTimestamp( void )
 	<< "] ";
 }
 
+/**
+ * @brief Constructs a new Account with an initial deposit.
+ * @param initial_deposit Initial amount to deposit.
+ */
 Account::Account(int initial_deposit)
 {
 	_displayTimestamp();
@@ -134,6 +176,11 @@ Account::Account(int initial_deposit)
 	_nbAccounts++;
 }
 
+/**
+ * @brief Destructor for the Account.
+ *
+ * Logs the account closure and final balance.
+ */
 Account::~Account(void)
 {
 	_displayTimestamp();
