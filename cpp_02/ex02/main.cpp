@@ -13,6 +13,14 @@
 #include "Fixed.hpp"
 #include <iostream>
 
+/**
+ * @brief Entry point of the program demonstrating Fixed class operations.
+ * 
+ * This function creates and manipulates instances of the Fixed class to 
+ * demonstrate arithmetic, increment operators, and max comparisons.
+ * 
+ * @return int Exit status.
+ */
 int main( void )
 {
 	Fixed a;
