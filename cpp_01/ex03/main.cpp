@@ -14,6 +14,14 @@
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 
+/**
+ * @brief Entry point of the program.
+ *
+ * Demonstrates the behavior of HumanA and HumanB classes with Weapon
+ * objects, showing how attacks reflect changes in weapon type.
+ *
+ * @return Returns 0 on successful execution.
+ */
 int main()
 {
 	{
