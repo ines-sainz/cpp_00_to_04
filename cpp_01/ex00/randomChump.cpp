@@ -12,6 +12,14 @@
 
 #include "Zombie.hpp"
 
+/**
+ * @brief Creates a Zombie on the stack and makes it announce itself.
+ *
+ * Instantiates a temporary Zombie object with the given name and calls its
+ * announce() method immediately.
+ *
+ * @param name The name of the zombie.
+ */
 void randomChump( std::string name )
 {
 	Zombie new_zombie = Zombie(name);
