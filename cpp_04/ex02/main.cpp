@@ -16,6 +16,16 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
+/**
+ * @brief Entry point demonstrating polymorphism and deep copy in Animal hierarchy.
+ *
+ * Creates instances of Dog and Cat using base class pointers to test polymorphic
+ * behavior and correct destructor invocation. Also tests deep copying and memory
+ * management with dynamic arrays of Animal pointers and Brain idea copying.
+ * The Animal class is abstract so it can`t be instantiated.
+ *
+ * @return int Exit status.
+ */
 int main()
 {
 	/*Animal animal1;
