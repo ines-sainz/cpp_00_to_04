@@ -12,11 +12,20 @@
 
 #include "DiamondTrap.hpp"
 
+/**
+ * @brief Prints the DiamondTrap's name and its ClapTrap base name.
+ */
 void	DiamondTrap::whoAmI( void )
 {
 	std::cout << "DiamondTrap: " << this->name << ", ClapTrap: " << ClapTrap::name << std::endl;
 }
 
+/**
+ * @brief Copy assignment operator for DiamondTrap.
+ * 
+ * @param before The DiamondTrap object to copy from.
+ * @return DiamondTrap& A reference to the assigned object.
+ */
 DiamondTrap& DiamondTrap:: operator=(const DiamondTrap& before)
 {
 	std::cout << "Copy assigment operator called" << std::endl;
@@ -27,11 +36,22 @@ DiamondTrap& DiamondTrap:: operator=(const DiamondTrap& before)
 	return (*this);
 }
 
+/**
+ * @brief Copy constructor for DiamondTrap.
+ * 
+ * @param before The DiamondTrap object to copy from.
+ */
 DiamondTrap::DiamondTrap(const DiamondTrap& before)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = before;
 }
+
+/**
+ * @brief Default constructor for DiamondTrap.
+ * 
+ * Initializes default values and sets ClapTrap name suffix.
+ */
 DiamondTrap::DiamondTrap( void )
 {
 	std::cout << "Default DiamondTrap Constructor" << std::endl;
@@ -42,6 +62,11 @@ DiamondTrap::DiamondTrap( void )
 	this->AttackDamage = 30;
 }
 
+/**
+ * @brief Parameterized constructor for DiamondTrap.
+ * 
+ * @param name The name to assign to the DiamondTrap.
+ */
 DiamondTrap::DiamondTrap( std::string name )
 {
 	this->name = name;
@@ -51,6 +76,12 @@ DiamondTrap::DiamondTrap( std::string name )
 	this->EnergyPoints = 50;
 	this->AttackDamage = 30;
 }
+
+/**
+ * @brief Destructor for DiamondTrap.
+ * 
+ * Prints a message upon object destruction.
+ */
 DiamondTrap::~DiamondTrap()
 {
 	std::cout << "Default DiamondTrap Destructor" << std::endl;
