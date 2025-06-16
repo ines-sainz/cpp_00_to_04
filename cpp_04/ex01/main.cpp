@@ -16,6 +16,15 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
+/**
+ * @brief Entry point of the program demonstrating Animal class hierarchy.
+ * 
+ * Creates instances of Dog and Cat using base class pointers, demonstrates
+ * polymorphism, proper destruction without memory leaks, dynamic allocation
+ * of animals in an array, and deep copying of Cat objects with Brain ideas.
+ * 
+ * @return int Exit status of the program.
+ */
 int main()
 {
 	const Animal* j = new Dog();
