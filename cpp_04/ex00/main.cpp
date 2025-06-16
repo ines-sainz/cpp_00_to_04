@@ -16,6 +16,15 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
+/**
+ * @brief Demonstrates polymorphism and function overriding.
+ * 
+ * Creates instances of Animal, Dog, Cat, and WrongCat using base class
+ * pointers. It then shows the behavior of virtual vs non-virtual functions
+ * by calling getType() and makeSound() on each.
+ * 
+ * @return int Returns 0 on successful execution.
+ */
 int main()
 {
 	const Animal* meta = new Animal();
