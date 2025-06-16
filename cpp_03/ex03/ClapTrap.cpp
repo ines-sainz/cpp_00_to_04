@@ -38,6 +38,13 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	this->EnergyPoints -= 1;
 }
 
+/**
+ * @brief Inflicts damage to the ClapTrap, reducing its hit points.
+ *
+ * If hit points drop to or below zero, the ClapTrap is considered dead.
+ *
+ * @param amount The amount of damage to inflict.
+ */
 void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (this->hitPoints <= 0)
@@ -56,6 +63,13 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	std::cout << ". " << this->hitPoints << " hit points left!\n";
 }
 
+/**
+ * @brief Attacks the given target, causing damage if enough energy is available.
+ * 
+ * If the ClapTrap is dead or has no energy, it cannot attack.
+ *
+ * @param target The name of the target being attacked.
+ */
 void	ClapTrap::attack(const std::string& target)
 {
 	if (this->hitPoints <= 0)
@@ -74,6 +88,14 @@ void	ClapTrap::attack(const std::string& target)
 		std::cout << "ClapTrap " << this->name << " can't attack, not enough EnergyPoints" << std::endl;
 }
 
+/**
+ * @brief Copy assignment operator.
+ * 
+ * Copies the attributes from another ClapTrap.
+ *
+ * @param before The ClapTrap to copy from.
+ * @return Reference to the assigned ClapTrap.
+ */
 ClapTrap& ClapTrap:: operator=(const ClapTrap& before)
 {
 	std::cout << "Copy assigment operator called" << std::endl;
@@ -84,12 +106,26 @@ ClapTrap& ClapTrap:: operator=(const ClapTrap& before)
 	return (*this);
 }
 
+/**
+ * @brief Copy constructor.
+ *
+ * Creates a new ClapTrap as a copy of another.
+ *
+ * @param before The ClapTrap to copy.
+ */
 ClapTrap::ClapTrap(const ClapTrap& before)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = before;
 }
 
+/**
+ * @brief Parameterized constructor.
+ *
+ * Initializes a ClapTrap with a given name.
+ *
+ * @param name The name of the ClapTrap.
+ */
 ClapTrap::ClapTrap(std::string name)
 {
 	this->name = name;
@@ -99,6 +135,11 @@ ClapTrap::ClapTrap(std::string name)
 	std::cout << "ClapTrap " << this->name << " Constructor" << std::endl;
 }
 
+/**
+ * @brief Default constructor.
+ *
+ * Initializes a ClapTrap with default values.
+ */
 ClapTrap::ClapTrap(void)
 {
 	name = "";
@@ -108,9 +149,12 @@ ClapTrap::ClapTrap(void)
 	std::cout << "Default ClapTrap Constructor" << std::endl;
 }
 
+/**
+ * @brief Destructor.
+ *
+ * Cleans up when a ClapTrap object is destroyed.
+ */
 ClapTrap::~ClapTrap()
 {
 	std::cout << "Default ClapTrap Destructor" << std::endl;
 }
-
-
