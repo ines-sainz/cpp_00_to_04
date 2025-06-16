@@ -17,6 +17,17 @@
 #include "Ice.hpp"
 #include "Cure.hpp"
 
+/**
+ * @brief Main function demonstrating the Materia system functionality.
+ * 
+ * - Creates a MateriaSource and learns multiple Materias (Ice, Cure).
+ * - Creates a Character named "me" and equips it with Materias.
+ * - Attempts to create a non-existent Materia ("patata").
+ * - Uses and unequips Materias with another Character "bob".
+ * - Deletes all dynamically allocated memory to prevent leaks.
+ * 
+ * @return int Program exit status.
+ */
 int main()
 {
 	IMateriaSource* src = new MateriaSource();
