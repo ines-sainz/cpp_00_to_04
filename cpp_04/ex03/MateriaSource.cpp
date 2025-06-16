@@ -12,6 +12,14 @@
 
 #include "MateriaSource.hpp"
 
+/**
+ * @brief Creates a Materia of the specified type.
+ * 
+ * Searches the learned materias and returns a clone of the matching type.
+ * 
+ * @param type The type of Materia to create.
+ * @return AMateria* A clone of the matched Materia, or NULL if not found.
+ */
 AMateria* MateriaSource::createMateria( std::string const & type )
 {
 	for (size_t i = 0; i < 4; i++)
@@ -26,6 +34,13 @@ AMateria* MateriaSource::createMateria( std::string const & type )
 	return (NULL);
 }
 
+/**
+ * @brief Learns a new Materia if there is an empty slot.
+ * 
+ * Stores the given Materia in the first available slot.
+ * 
+ * @param materia Pointer to the Materia to learn.
+ */
 void MateriaSource::learnMateria( AMateria* materia )
 {
 	for (size_t i = 0; i < 4; i++)
@@ -40,6 +55,14 @@ void MateriaSource::learnMateria( AMateria* materia )
 	std::cout << "The Materia can't be learned" << std::endl;
 }
 
+/**
+ * @brief Assignment operator for MateriaSource.
+ * 
+ * Copies all Materia pointers from another MateriaSource.
+ * 
+ * @param before The MateriaSource object to copy from.
+ * @return MateriaSource& Reference to this object.
+ */
 MateriaSource& MateriaSource::operator=( const MateriaSource& before )
 {
 	std::cout << "Copy MateriaSoure Assigment Operator called" << std::endl;
@@ -48,12 +71,24 @@ MateriaSource& MateriaSource::operator=( const MateriaSource& before )
 	return (*this);
 }
 
+/**
+ * @brief Copy constructor for MateriaSource.
+ * 
+ * Initializes this object by copying another MateriaSource.
+ * 
+ * @param before The MateriaSource object to copy.
+ */
 MateriaSource::MateriaSource( const MateriaSource& before )
 {
 	std::cout << "Copy MateriaSource Constructor called" << std::endl;
 	*this = before;
 }
 
+/**
+ * @brief Default constructor for MateriaSource.
+ * 
+ * Initializes all materia slots to NULL.
+ */
 MateriaSource::MateriaSource( void )
 {
 	std::cout << "Default MateriaSource Constructor called" << std::endl;
@@ -62,6 +97,11 @@ MateriaSource::MateriaSource( void )
 	
 }
 
+/**
+ * @brief Destructor for MateriaSource.
+ * 
+ * Deletes all stored materias and frees resources.
+ */
 MateriaSource::~MateriaSource()
 {
 	for (size_t i = 0; i < 4; i++)
