@@ -12,6 +12,15 @@
 
 #include "Character.hpp"
 
+/**
+ * @brief Use the Materia at the specified index on a target character.
+ * 
+ * Checks if the index is valid and the Materia exists, then uses it on
+ * the target. Prints an error message if index or Materia is invalid.
+ * 
+ * @param idx Index of the Materia to use (0-3).
+ * @param target The character to apply the Materia effect to.
+ */
 void Character::use( int idx, ICharacter& target )
 {
     if (idx >= 0 && idx < 4)
@@ -25,7 +34,14 @@ void Character::use( int idx, ICharacter& target )
     std::cout << "Wrong index or materia to use" << std::endl;
 }
 
-
+/**
+ * @brief Unequip the Materia at the given index.
+ * 
+ * If valid and Materia exists, it unequips it by setting pointer to NULL
+ * and prints which Materia was unequipped.
+ * 
+ * @param idx Index of the Materia to unequip (0-3).
+ */
 void Character::unequip( int idx )
 {
     if (idx >= 0 && idx < 4)
@@ -36,6 +52,14 @@ void Character::unequip( int idx )
     }
 }
 
+/**
+ * @brief Equip a new Materia into the first available slot.
+ * 
+ * If Materia pointer is not null, attempts to store it in the first
+ * empty slot of the inventory. Prints success or failure message.
+ * 
+ * @param m Pointer to the Materia to equip.
+ */
 void Character::equip(AMateria* m)
 {
     if (m)
@@ -53,11 +77,24 @@ void Character::equip(AMateria* m)
     std::cout << "Can't equip materia." << std::endl; 
 }
 
+/**
+ * @brief Gets the name of the character.
+ * 
+ * @return const std::string& The name of the character.
+ */
 std::string const & Character::getName() const
 {
     return (this->name);
 }
 
+/**
+ * @brief Copy assignment operator.
+ * 
+ * Copies the name and clones all Materia pointers from another character.
+ * 
+ * @param before The character to copy from.
+ * @return Character& Reference to this character.
+ */
 Character& Character::operator=( const Character& before)
 {
     std::cout << "Copy Character Assignment Operator called" << std::endl;
@@ -67,12 +104,26 @@ Character& Character::operator=( const Character& before)
     return (*this);
 }
 
+/**
+ * @brief Copy constructor.
+ * 
+ * Uses assignment operator to copy another character.
+ * 
+ * @param before The character to copy.
+ */
 Character::Character( const Character& before)
 {
     std::cout << "Copy Character Constructor called" << std::endl;
     *this = before;
 }
 
+/**
+ * @brief Constructor with a name.
+ * 
+ * Initializes the character with a given name and empty Materia slots.
+ * 
+ * @param name The name of the character.
+ */
 Character::Character( std::string name )
 {
     this->name = name;
@@ -81,6 +132,11 @@ Character::Character( std::string name )
     std::cout << "Character Constructor called" << std::endl;
 }
 
+/**
+ * @brief Default constructor.
+ * 
+ * Initializes with empty name and empty Materia slots.
+ */
 Character::Character( void )
 {
     this->name = "";
@@ -89,6 +145,11 @@ Character::Character( void )
     std::cout << "Default Character Constructor called" << std::endl;
 }
 
+/**
+ * @brief Destructor.
+ * 
+ * Deletes all equipped Materia to free memory and outputs a message.
+ */
 Character::~Character()
 {
     for (size_t i = 0; i < 4; i++)
