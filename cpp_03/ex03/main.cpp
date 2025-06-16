@@ -15,6 +15,14 @@
 #include "FragTrap.hpp"
 #include "DiamondTrap.hpp"
 
+/**
+ * @brief Entry point of the program.
+ * 
+ * Demonstrates the behavior of ClapTrap, ScavTrap, FragTrap, and 
+ * DiamondTrap objects by performing attacks, repairs, and unique actions.
+ * 
+ * @return int Exit status of the program.
+ */
 int main()
 {
 	ClapTrap	person1("Person1");
